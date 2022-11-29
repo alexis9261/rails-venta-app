@@ -1,0 +1,11 @@
+<h1>mi primera pagina en Rails</h1>
+
+<h2>Tenemos <%= @products.count %> productos en BD </h2>
+<hr/>
+<% @products.each do |product| %>
+  <%= link_to product_path(product.id) do %>
+    <h3><%= product.title %></h3>
+  <% end %>  
+  <p>USD <%= product.price %></p>
+  <hr/>
+<% end %>
